@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ipojo>
 	<component immediate="false" classname="fr.imag.adele.cadse.workspace.si.defaultclassreferencer.DefaultClassReferencer" factory="fr.imag.adele.cadse.workspace.si.defaultclassreferencer.DefaultClassReferencer" architecture="true">
-		<provides interface="fr.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer"/>
+		<provides specification="fr.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer"/>
 	</component>
 	<instance component="fr.imag.adele.cadse.workspace.si.defaultclassreferencer.DefaultClassReferencer" name="fr.imag.adele.cadse.si.workspace.defaultclassreferencer.instance"/>
 </ipojo>
