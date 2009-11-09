@@ -26,16 +26,11 @@ iPOJO-Components: component { $immediate="false" $classname="fr.imag.ad
  $factory="fr.imag.adele.cadse.workspace.si.defaultclassreferencer.Defa
  ultClassReferencer" $architecture="true" provides { $specification="fr
  .imag.adele.cadse.workspace.as.classreferencer.IClassReferencer" }mani
- pulation { field { $name="__IM" $type="org.apache.felix.ipojo.Instance
- Manager" }field { $name="__MloadClass$java_lang_String$java_lang_Strin
- g" $type="boolean" }method { $name="$init" }method { $arguments="{org.
- apache.felix.ipojo.InstanceManager}" $name="$init" }method { $argument
- s="{java.lang.String,java.lang.String}" $name="loadClass" $return="jav
- a.lang.Class" }method { $arguments="{java.lang.String,java.lang.String
- }" $name="__loadClass" $return="java.lang.Class" }interface { $name="f
- r.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer" }}}i
- nstance { $component="fr.imag.adele.cadse.workspace.si.defaultclassref
- erencer.DefaultClassReferencer" $name="fr.imag.adele.cadse.si.workspac
- e.defaultclassreferencer.instance" }
+ pulation { method { $name="$init" }method { $arguments="{java.lang.Str
+ ing,java.lang.String}" $name="loadClass" $return="java.lang.Class" }in
+ terface { $name="fr.imag.adele.cadse.workspace.as.classreferencer.ICla
+ ssReferencer" }}}instance { $component="fr.imag.adele.cadse.workspace.
+ si.defaultclassreferencer.DefaultClassReferencer" $name="fr.imag.adele
+ .cadse.si.workspace.defaultclassreferencer.instance" }
 ipojo-auto-start: true
 
