@@ -10,7 +10,7 @@ Created-By: Apache Maven Bundle Plugin
 Bundle-Vendor: Adele/LIG/ Grenoble University, France
 Build-Jdk: 1.6.0_17
 Bundle-Version: 2.3.0.SNAPSHOT
-Bnd-LastModified: 1261565759334
+Bnd-LastModified: 1261575242742
 Bundle-ManifestVersion: 2
 Bundle-Description: Cadse si.defaultclassreferencer
 Bundle-SymbolicName: fr.imag.adele.cadse.si.defaultclassreferencer;sin
