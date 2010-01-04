@@ -6,57 +6,24 @@
     <name>fr.imag.adele.cadse.si.defaultclassreferencer</name>
     <version>2.3.0-SNAPSHOT</version>
     <description>Cadse si.defaultclassreferencer</description>
-    <organization>
-        <name>Adele/LIG/ Grenoble University, France</name>
-        <url>http://www-adele.imag.fr/</url>
-    </organization>
+    <parent>
+		<artifactId>fr.imag.adele.cadse.parent.ipojo</artifactId>
+		<groupId>fr.imag.adele.cadse</groupId>
+		<version>2.3.0-SNAPSHOT</version>
+		<relativePath>../fr.imag.adele.cadse.parent.ipojo</relativePath>
+	</parent>
+	
     <build>
         <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <manifestLocation>META-INF</manifestLocation>
                     <instructions>
-                        <Bundle-SymbolicName>${pom.name};singleton:=true</Bundle-SymbolicName>
-                        <Bundle-Name>${pom.name}</Bundle-Name>
-                        <Bundle-Description>${pom.description}</Bundle-Description>
-                        <Export-Package>fr.imag.adele.cadse.workspace.si.defaultclassreferencer*</Export-Package>
-                        <Private-Package></Private-Package>
-                        <!-- Include-Resource> META-INF/LICENSE=LICENSE,
-              plugin.xml=plugin.xml, plugin.properties=plugin.properties
-               </Include-Resource>  -->
-						<Ipojo-auto-start>true</Ipojo-auto-start>
-                       	<_removeheaders>Bnd-LastModified</_removeheaders>
+                        <Export-Package>fr.imag.adele.cadse.workspace.si.defaultclassreferencer*;version="${version.cadse}"</Export-Package>
                     </instructions>
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <tasks>
-                                <mkdir dir="${basedir}/META-INF/" />
-                                <copy todir="${basedir}/META-INF/" preservelastmodified="true">
-                                    <fileset dir="${basedir}/target/classes/META-INF"/>
-                                </copy>
-                            </tasks>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
@@ -64,28 +31,22 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>as.ModelVersionDBService</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>util</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
         	<groupId>org.eclipse</groupId>
         	<artifactId>org.eclipse.osgi</artifactId>
-        	<version>3.5.1.R35x_v20090827</version>
         </dependency>
         <dependency>
         	<groupId>fr.imag.adele.cadse</groupId>
         	<artifactId>as.classreferencer</artifactId>
-        	<version>2.3.0-SNAPSHOT</version>
-        	<type>bundle</type>
         </dependency>
         <dependency>
         	<groupId>org.eclipse</groupId>
         	<artifactId>org.eclipse.equinox.registry</artifactId>
-        	<version>3.4.100.v20090520-1800</version>
         </dependency>
     </dependencies>
 </project>
