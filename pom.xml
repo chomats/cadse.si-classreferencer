@@ -24,6 +24,7 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
+                    <manifestLocation>META-INF</manifestLocation>
                     <instructions>
                         <Bundle-SymbolicName>${pom.name};singleton:=true</Bundle-SymbolicName>
                         <Bundle-Name>${pom.name}</Bundle-Name>
@@ -33,6 +34,8 @@
                         <!-- Include-Resource> META-INF/LICENSE=LICENSE,
               plugin.xml=plugin.xml, plugin.properties=plugin.properties
                </Include-Resource>  -->
+						<Ipojo-auto-start>true</Ipojo-auto-start>
+                       	<_removeheaders>Bnd-LastModified</_removeheaders>
                     </instructions>
                 </configuration>
             </plugin>
