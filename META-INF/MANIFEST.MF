@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: fr.imag.adele.cadse.si.workspace.defaultclassreferencer
+Bundle-SymbolicName: fr.imag.adele.cadse.si.workspace.defaultclassreferencer;singleton:=true
+Bundle-Vendor: Adele/LIG/ Grenoble University
+Bundle-Version: 2.2.1.qualifier
+Bundle-Localization: plugin
+Bundle-ClassPath: .
+Bundle-Description: Bundle fr.imag.adele.cadse.si.workspace.defaultclassreferencer
+Export-Package: fr.imag.adele.cadse.workspace.si.defaultclassreferencer;version="2.2.1"
+Import-Package: fr.imag.adele.cadse.workspace.as.classreferencer,
+ fr.imag.adele.cadse.workspace.si.defaultclassreferencer;version="2.2.1",
+ org.apache.felix.ipojo;version="1.2.0",
+ org.apache.felix.ipojo.architecture;version="1.2.0",
+ org.eclipse.core.internal.registry.osgi,
+ org.eclipse.core.runtime,
+ org.eclipse.core.runtime.jobs,
+ org.osgi.framework;version="1.4.0",
+ org.osgi.service.cm;version="1.2",
+ org.osgi.service.log;version="1.3"
+Bundle-ActivationPolicy: lazy
+Created-By: envsam & iPOJO
+iPOJO-Components: component { $immediate="false" $classname="fr.imag.ad
+ ele.cadse.workspace.si.defaultclassreferencer.DefaultClassReferencer" 
+ $factory="fr.imag.adele.cadse.workspace.si.defaultclassreferencer.Defa
+ ultClassReferencer" $architecture="true" provides { $specification="fr
+ .imag.adele.cadse.workspace.as.classreferencer.IClassReferencer" }mani
+ pulation { field { $name="__IM" $type="org.apache.felix.ipojo.Instance
+ Manager" }field { $name="__MloadClass$java_lang_String$java_lang_Strin
+ g" $type="boolean" }method { $name="$init" }method { $arguments="{org.
+ apache.felix.ipojo.InstanceManager}" $name="$init" }method { $argument
+ s="{java.lang.String,java.lang.String}" $name="loadClass" $return="jav
+ a.lang.Class" }method { $arguments="{java.lang.String,java.lang.String
+ }" $name="__loadClass" $return="java.lang.Class" }interface { $name="f
+ r.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer" }}}i
+ nstance { $component="fr.imag.adele.cadse.workspace.si.defaultclassref
+ erencer.DefaultClassReferencer" $name="fr.imag.adele.cadse.si.workspac
+ e.defaultclassreferencer.instance" }
+ipojo-auto-start: true
+
