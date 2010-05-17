@@ -37,16 +37,12 @@
             <artifactId>util</artifactId>
         </dependency>
         <dependency>
-        	<groupId>org.eclipse</groupId>
-        	<artifactId>org.eclipse.osgi</artifactId>
-        </dependency>
-        <dependency>
-        	<groupId>fr.imag.adele.cadse</groupId>
+        	<groupId>${project.groupId}</groupId>
         	<artifactId>as.classreferencer</artifactId>
         </dependency>
         <dependency>
-        	<groupId>org.eclipse</groupId>
-        	<artifactId>org.eclipse.equinox.registry</artifactId>
+        	<groupId>${project.groupId}</groupId>
+        	<artifactId>as.platformeIDE</artifactId>
         </dependency>
     </dependencies>
 </project>
