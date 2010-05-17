@@ -21,9 +21,9 @@ package fr.imag.adele.cadse.workspace.si.defaultclassreferencer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.eclipse.core.internal.registry.osgi.OSGIUtils;
 import org.osgi.framework.Bundle;
 
+import fr.imag.adele.cadse.as.platformide.IPlatformIDE;
 import fr.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer;
 
 /**
@@ -33,6 +33,7 @@ public class DefaultClassReferencer implements IClassReferencer {
 	/** The m logger. */
 	static Logger	mLogger	= Logger.getLogger("SI.Workspace.DefaultClassReferencer");
 
+	IPlatformIDE platformIDE;
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -55,7 +56,7 @@ public class DefaultClassReferencer implements IClassReferencer {
 		}
 
 		Bundle contributingBundle;
-		contributingBundle = OSGIUtils.getDefault().getBundle(contributorName);
+		contributingBundle = platformIDE.findBundle(contributorName);
 
 		if (contributingBundle == null) {
 			mLogger.severe("cannot find Bundle " + contributorName);

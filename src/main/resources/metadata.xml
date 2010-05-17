@@ -2,6 +2,7 @@
 <ipojo>
 	<component immediate="false" classname="fr.imag.adele.cadse.workspace.si.defaultclassreferencer.DefaultClassReferencer" factory="fr.imag.adele.cadse.workspace.si.defaultclassreferencer.DefaultClassReferencer" architecture="true">
 		<provides specification="fr.imag.adele.cadse.workspace.as.classreferencer.IClassReferencer"/>
+		<requires field="platformIDE" optional="false"/>
 	</component>
 	<instance component="fr.imag.adele.cadse.workspace.si.defaultclassreferencer.DefaultClassReferencer" name="fr.imag.adele.cadse.si.workspace.defaultclassreferencer.instance"/>
 </ipojo>
