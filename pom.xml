@@ -43,6 +43,10 @@
         <dependency>
         	<groupId>${project.groupId}</groupId>
         	<artifactId>as.platformeIDE</artifactId>
+        </dependency>                
+        <dependency>
+        	<groupId>org.osgi</groupId>
+        	<artifactId>org.osgi.core</artifactId>
         </dependency>
     </dependencies>
 </project>
