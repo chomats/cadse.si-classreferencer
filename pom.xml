@@ -30,7 +30,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>as.ModelVersionDBService</artifactId>
+            <artifactId>as.modelversiondbservice</artifactId>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
